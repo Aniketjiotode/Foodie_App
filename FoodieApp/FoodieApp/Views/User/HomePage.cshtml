@@ -1,0 +1,131 @@
+﻿@using CommanLayer;
+@{
+    var data = ViewBag.Category;
+    var loginmodal = @TempData["loginfail"];
+}
+@{
+    ViewData["Title"] = "HomePage";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/FoodApp.css" />
+<link rel="stylesheet" href="~/css/login.css" />
+
+
+
+
+
+
+<div class="container-fluid text-center searchdiv">
+
+    <nav class="navbar navbar-inverse  navigationbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    @*                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    *@@*                    <li><a href="#"><span class="glyphicon glyphicon-log-in id="myBtn""></span> Login</a>
+                    *@
+                    <button type="button" class="btn btn-default btn-lg" id="myBtns"><span class="glyphicon glyphicon-user"></span>Sign Up</button>
+                    @Html.Partial("SignupPage")
+
+                  
+                    <button type="button" class="btn btn-default btn-lg" id="myBtn"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+
+                    @Html.Partial("LoginPage")
+                    @*  <div class="dropdown" style="display:inline-block">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Dropdown Example
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    </ul>
+                    </div>*@
+                  
+
+                </ul>
+              
+            </div>
+        </div>
+    </nav>
+    <h1><em>zomato</em></h1>
+    <h2>Find The Best Restaurant, Cafe, And Bars</h2>
+    <form asp-controller="RestaurantController" method="post" class="form-inline">
+   @*@using (Html.BeginForm("GetRestautrantbyName/","Restaurant"))*@
+        
+            <span class="input-group searechbar">
+                <div class="input-group-btn">
+                    <button class="btn btn-default searechbarbtn">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control" name="cityName" placeholder="Search your location " required>
+            </span>
+            <span class="input-group searechbar">
+                <div class="input-group-btn">
+                <button class="btn btn-default searechbarbtn" type="submit" formaction="Restaurant/GetRestautrantbyName">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control" name="RestName" size="50" placeholder="Search for Restaurant" required>
+            </span>       
+   </form>
+  
+</div>
+
+
+<div class="container ">
+    <h1> Quick Search</h1>
+    <h3>Select Your City</h3>
+  @*  <select class="Citys">
+        <option>City</option>
+        <option>Mumbai</option>
+        <option>Pune</option>
+        <option>Nagpur</option>
+        <option>Hyderbad</option>
+    </select>*@
+    @Html.DropDownList("citylist",new SelectList( (IEnumerable<string>)@ViewBag.citylist),"Please Select Your City",new {@class="form-control Citys"})
+    <p class="alert-danger">@TempData["error"]</p>
+    <h3>Find Restaurant By Meal Type</h3>
+    <div class="row">
+        @foreach (var item in (List<CategoryModel>)@ViewData["category"])
+        {
+            <a href="/Restaurant/Listing/@item.CategoryId">
+                <div class="col-sm-4 card">
+                    <div class="inside">
+                        <img src="@item.CategoryImage" alt="">
+                    </div>
+                    <div class="inside2">
+                        <h4>@item.CategoryName</h4>
+                        <p>@item.CategoryDescription</p>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</div>
+
+<hr />
+
+<footer class="bg-white">
+    @Html.Partial("Footer")
+</footer>
+<script>
+    //var msg = '@TempData["loginfail"]';
+    //if(msg!=null){
+    //    window.onload=function(){
+    //        alert(msg)
+    //    }
+    //}
+</script>

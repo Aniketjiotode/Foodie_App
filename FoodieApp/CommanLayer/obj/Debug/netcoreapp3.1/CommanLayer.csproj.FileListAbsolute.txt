@@ -1,0 +1,10 @@
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\bin\Debug\netcoreapp3.1\CommanLayer.deps.json
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\bin\Debug\netcoreapp3.1\CommanLayer.dll
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\bin\Debug\netcoreapp3.1\CommanLayer.pdb
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\obj\Debug\netcoreapp3.1\CommanLayer.csproj.AssemblyReference.cache
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\obj\Debug\netcoreapp3.1\CommanLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\obj\Debug\netcoreapp3.1\CommanLayer.AssemblyInfoInputs.cache
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\obj\Debug\netcoreapp3.1\CommanLayer.AssemblyInfo.cs
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\obj\Debug\netcoreapp3.1\CommanLayer.csproj.CoreCompileInputs.cache
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\obj\Debug\netcoreapp3.1\CommanLayer.dll
+C:\Users\91962\Desktop\MvcProject\MyntraApp\CommanLayer\obj\Debug\netcoreapp3.1\CommanLayer.pdb

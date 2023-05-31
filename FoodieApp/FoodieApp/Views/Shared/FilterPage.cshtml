@@ -1,0 +1,59 @@
+﻿<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-secondary me-3" style="width: 100px;font-weight:600;"
+        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Filters
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel"> Filters </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="filter">
+                    <SMAll> Select location</SMAll><br>
+                    <select name="location">
+                        <option>select location</option>
+                        <option>munbai</option>
+                        <option>pune</option>
+                        <option>nagpur</option>
+                        <option>hyderbad</option>
+                    </select>
+                    <div class="cuisine">
+                        <h4>cuisine</h4>
+                        <ul>
+                            <li> <input type="checkbox"> North Indian</li>
+                            <li> <input type="checkbox"> south Indian</li>
+                            <li> <input type="checkbox"> chinese</li>
+                            <li> <input type="checkbox"> Fast food</li>
+                            <li> <input type="checkbox"> snacks and desert</li>
+                        </ul>
+                        <h4>cost for two</h4>
+                        <ul>
+                            <li> <input type="radio" name="h"> less than 500</li>
+                            <li> <input type="radio" name="h"> 500 to 1000</li>
+                            <li> <input type="radio" name="h"> 1000 to 1500</li>
+                            <li> <input type="radio" name="h"> 1500 to 2000</li>
+                            <li> <input type="radio" name="h"> 2000 to 2500</li>
+                        </ul>
+                        <h4> sort</h4>
+                        <ul>
+                            <li> <input type="radio" name="h"> price low to high</li>
+                            <li> <input type="radio" name="h"> price high to low</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+        </div>
+    </div>
+</div> 

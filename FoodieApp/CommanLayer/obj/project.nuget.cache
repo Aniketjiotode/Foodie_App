@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jz5iVDoFRvWsLzsOdF5MUzmyS5UZNnNF/pas5W1bbZ2nNvy0WTjcilXJjnEayZAi3gVefJ/XwSDgPi2B6wi+TQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\91962\\Desktop\\MvcProject\\MyntraApp\\CommanLayer\\CommanLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\91962\\.nuget\\packages\\experimental.system.messaging\\1.1.0\\experimental.system.messaging.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
